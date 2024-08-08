@@ -22,7 +22,12 @@ function createPassword() {
   passwordBox.value = password;
 }
 
-createPassword();
+function copyPassword() {
+  const passwordBox = document.getElementById("password"); // Assuming this is the input element containing the password
+  passwordBox.select(); // Selects the text inside the input element
+  document.execCommand("copy"); // Executes the copy command
+  alert("Password copied to clipboard!"); // Optional alert to notify the user
+}
 
 //Previously it use 4 incremnts to add one of each (char,num,symbols)
 //and then use while loop to fill the remaining lenght
